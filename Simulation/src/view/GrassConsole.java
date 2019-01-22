@@ -1,5 +1,10 @@
 package view;
+import java.util.ArrayList;
+
+import control.Animal;
 import control.Grass;
+import control.Sheep;
+import control.World;
 
 public class GrassConsole {
 	private static void display(Grass grass) {
@@ -17,17 +22,21 @@ public class GrassConsole {
 
 	public static void main(String[] args) {
 		Grass grass = new Grass(5,7);
-		display(grass);
+		World world = new World();
+		world.grass = grass;
+		ArrayList<Animal> animals= new ArrayList<Animal>();
+		Sheep sheep = new Sheep();
+		grass.start();
 		for (int i=0;i<5;i++) {
 			grass.grow();
 			System.out.println("//////////////////////");
 			display(grass);
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-		
-		
-		
-		
-
 	}
 
 }
