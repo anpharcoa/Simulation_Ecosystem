@@ -2,9 +2,7 @@ package view;
 import control.Grass;
 
 public class GrassConsole {
-
-	public static void main(String[] args) {
-		Grass grass = new Grass(5,7);
+	private static void display(Grass grass) {
 		for (int i=0; i< grass.nRows;i++)
 		{
 			for (int j=0; j< grass.nColumns; j++)
@@ -14,6 +12,20 @@ public class GrassConsole {
 			}
 			System.out.println();
 		}
+		
+	}
+
+	public static void main(String[] args) {
+		Grass grass = new Grass(5,7);
+		display(grass);
+		for (int i=0;i<5;i++) {
+			grass.grow();
+			System.out.println("//////////////////////");
+			display(grass);
+		}
+		
+		
+		
 		
 
 	}
