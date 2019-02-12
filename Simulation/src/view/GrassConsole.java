@@ -24,19 +24,19 @@ public class GrassConsole {
 		Grass grass = new Grass(5,7);
 		World world = new World();
 		world.grass = grass;
-		ArrayList<Animal> animals= new ArrayList<Animal>();
-		Sheep sheep = new Sheep();
+		ArrayList<Animal> animals= new ArrayList<>();
+		Sheep sheep = new Sheep(3,6);
+		
 		grass.start();
-		for (int i=0;i<5;i++) {
-			grass.grow();
-			System.out.println("//////////////////////");
+		while(true) {
+			System.out.println("////////////////");
 			display(grass);
 			try {
 				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+}
 	}
 
 }

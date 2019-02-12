@@ -1,7 +1,12 @@
 package control;
 
 public class Sheep extends Animal implements IAnimal{
-
+	
+	public Sheep(double energy, int speed) {
+		this.energy = energy;
+		this.speed = speed;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
