@@ -2,7 +2,7 @@ package control;
 
 import java.util.Random;
 
-public class Animal {
+public class Animal extends Thread{
 	protected double energy;
 	protected int speed;
 	protected Random rand;

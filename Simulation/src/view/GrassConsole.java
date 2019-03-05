@@ -21,16 +21,20 @@ public class GrassConsole {
 	}
 
 	public static void main(String[] args) {
+		
 		Grass grass = new Grass(5,7);
 		World world = new World();
 		world.grass = grass;
 		ArrayList<Animal> animals= new ArrayList<>();
-		Sheep sheep = new Sheep(3,6);
+		Sheep sheep1 = new Sheep(12, 1, 0, 0, world);
+		animals.add(sheep1);
 		
+		world.animals = animals;
+		sheep1.start();
 		grass.start();
 		while(true) {
 			System.out.println("////////////////");
-			display(grass);
+			System.out.println(world.display());
 			try {
 				Thread.sleep(1500);
 			} catch (InterruptedException e) {

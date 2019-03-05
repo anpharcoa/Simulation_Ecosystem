@@ -14,6 +14,8 @@ public class World {
 				cells[i][j] = grass.getCell(i, j);
 			}
 		}
+		System.out.println(cells[0][0]);
+		
 		for(Animal a: animals) {
 			cells[a.currentRow][a.currentColumn] = 2;
 		}

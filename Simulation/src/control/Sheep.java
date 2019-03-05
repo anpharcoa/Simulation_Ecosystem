@@ -2,7 +2,7 @@ package control;
 
 public class Sheep extends Animal implements IAnimal{
 	
-	public Sheep(double energy, int speed) {
+	public Sheep(double energy, int speed, int currentRow, int currentColumn, World world) {
 		this.energy = energy;
 		this.speed = speed;
 	}
